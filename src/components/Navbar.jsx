@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useState } from 'react'
-import ServiceNav from './ServiceNav'
+import ServiceNav from '../components/ServiceNav'
 
 const Navbar = () => {
     const [serviceOpen, setserviceOpen] = useState(false)
@@ -61,10 +61,4 @@ const Ul = styled.ul`
     display: flex;
     width: 400px;
     justify-content: space-between;
-`
-const ServiceList = styled.div`
-    position: relative;
-`
-const Service = styled.div`
-    position: absolute;
 `

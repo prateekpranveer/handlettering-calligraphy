@@ -7,7 +7,7 @@ import Blog from './pages/Blog';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Workshop from './pages/Workshop';
-import Navbar from './pages/Navbar';
+import Navbar from './components/Navbar';
 
 function App() {
   return (

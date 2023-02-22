@@ -1,8 +1,13 @@
 import custom from './assets/images/custom-commision.jpg'
+import digital from './assets/images/digital-calligraphy.jpg'
+import engraving from './assets/images/engraving.jpg'
+import logobrading from './assets/images/logo-branding.jpg'
+import onsite from './assets/images/onsite-calligraphy.jpg'
+import wedding from './assets/images/wedding.jpg'
 
 export const services = [
     {
-        img: {custom},
+        img: wedding,
         header: "Wedding Calligraphy",
         submenu: [
             "Wedding Invite Design",
@@ -13,6 +18,7 @@ export const services = [
         ]
     },
     {
+        img: custom,
         header: "Custom Calligraphy Commision",
         submenu: [
             "Personalized Calligraphy Letters",
@@ -22,6 +28,7 @@ export const services = [
         ]
     },
     {
+        img: engraving,
         header: "Engraving && Foiling Services",
         submenu: [
             "Engraving & Foiling Service",
@@ -30,6 +37,7 @@ export const services = [
         ]
     },
     {
+        img: logobrading,
         header: "Logo Designing and Calligrahy for Corporate",
         submenu: [
             "Logo Design and Branding",
@@ -38,6 +46,7 @@ export const services = [
         ]
     },
     {
+        img: digital,
         header: "Digital Calligraphy",
         submenu: [
             "Digital Calligraphy for Wedding Albums",

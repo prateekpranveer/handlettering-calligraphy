@@ -9,7 +9,7 @@ const SingleService = ({data}) => {
                 data.map((p) => (
                     <SingleServiceMain>
                         <SingleServiceInside>
-                            <img src={p.img} alt="" />
+                            <Img src={p.img} alt="" />
                             <Header>{p.header}</Header>
                             <Text>
                                     {
@@ -46,7 +46,7 @@ const Heading = styled.h2`
     font-weight: 600;
 `
 const Text = styled.p`
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
     text-align: center;
     margin-top: 20px;
@@ -67,4 +67,7 @@ const Header = styled.h1`
     font-size: 25px;
     text-align: center;
     margin: top: 20px;
+`
+const Img = styled.img`
+    margin-bottom: 30px;
 `

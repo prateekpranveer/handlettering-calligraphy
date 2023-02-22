@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useState } from 'react'
 import ServiceNav from '../components/ServiceNav'
+import Banner from './Banner'
 
 const Navbar = () => {
     const [serviceOpen, setserviceOpen] = useState(false)
@@ -12,6 +13,7 @@ const Navbar = () => {
     }
   return (
     <>
+    <Banner/>
     <NavMain>
         <NavLeft>
             <Logo><Link to="">Handlettering && Calligraphy</Link> </Logo>

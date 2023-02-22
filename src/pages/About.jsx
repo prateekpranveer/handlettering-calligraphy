@@ -1,9 +1,10 @@
 import React from 'react'
+import InstagramPost from '../components/InstagramPost'
 
 const About = () => {
   return (
     <>
-    <div>I am about page</div>
+    <InstagramPost/>
     </>
   )
 }

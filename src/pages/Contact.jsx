@@ -10,7 +10,7 @@ const Contact = () => {
       <ContactInside>
         <SendMail>
           <Text>Please Write me a Mail to intiate a interaction</Text>
-          <Button>Send a Mail</Button>
+          <Button><a href="mailto:rahulryachand@gmail.com?subject='Calligraphy Requirements'&body='Just popped in to say hello'">Click to Send an Email</a></Button>
         </SendMail>
         <Social>
           <Text>Connect Me</Text>

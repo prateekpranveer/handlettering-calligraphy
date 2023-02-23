@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import facebook from './../assets/images/facebook.png'
 import instagram from './../assets/images/instagram.png'
 import linkedin from './../assets/images/linkedin.png'
@@ -10,7 +11,7 @@ const Contact = () => {
       <ContactInside>
         <SendMail>
           <Text>Please Write me a Mail to intiate a interaction</Text>
-          <Button><a href="mailto:rahulryachand@gmail.com?subject='Calligraphy Requirements'&body='Just popped in to say hello'">Click to Send an Email</a></Button>
+          <Button><Link to="/sendmain">Click to Send an Email</Link></Button>
         </SendMail>
         <Social>
           <Text>Connect Me</Text>

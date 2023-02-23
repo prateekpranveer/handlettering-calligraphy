@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Workshop from './pages/Workshop';
 import Navbar from './components/Navbar';
+import SendMain from './pages/SendMain';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/' element={<Home/>}></Route>
       <Route path='/service' element={<Services/>}></Route>
       <Route path='/workshop' element={<Workshop/>}></Route>
+      <Route path='/sendmain' element={<SendMain/>}></Route>
     </Routes>
     </Router>
   );

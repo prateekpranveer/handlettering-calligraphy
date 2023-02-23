@@ -1,30 +1,47 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useState } from 'react';
 import styled from 'styled-components'
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Form = () => {
-    function sendEmail(e) {
-        e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-            .then((result) => {
-                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-            }, (error) => {
-                console.log(error.text);
-            });
+    const form = useRef();
+    const [params, setparams] = useState({
+        from_name: "",
+        from_email: "",
+        message: ""
+    })
+    const service_ID = "service_2kjv8ig";
+    const template_ID = "template_gj50opq";
+    const public_Key = "EDYmdTRzQOrlm60h0"
+    const emailinit = () => {
+        emailjs.init("EDYmdTRzQOrlm60h0")
     }
+    emailinit();
+
+    const SendEmail = (e) => {
+        e.preventDefault();
+        emailjs.send(service_ID, template_ID, params, public_Key)
+            .then(
+                res => {
+                    console.log(res);
+                    alert("You have sent the message")
+                }
+            )
+    }
+
     return (
         <FormMain>
             <FormInside>
                 <FormHeading>Send Us Your Requirements</FormHeading>
                 <FormTagline>"Transform words into works of art - submit your calligraphy request today!"</FormTagline>
                 <FormX>
-                    <FormDiv onSubmit={sendEmail}>
-                        <Input type="text" name="from_name" placeholder='Full Name'/>
-                        <Input type="email" name="from_email" placeholder='Your Email Id'/>
-                        <Input type="text" name="subject" placeholder='Requirement'/>
-                        <TextArea name="html_message" placeholder='Requirements Overview'/>
-                        <Button>Submit</Button>
+                    <FormDiv ref={form} onSubmit={SendEmail}>
+                        <Input type="text" name="from_name" placeholder='Full Name' />
+                        <Input type="email" name="from_email" placeholder='Your Email Id' />
+                        <Input type="text" name="subject" placeholder='Requirement' />
+                        <TextArea name="html_message" placeholder='Requirements Overview' />
+                        <Input type="submit" value="send" />
                     </FormDiv>
                 </FormX>
                 <FormFooter></FormFooter>

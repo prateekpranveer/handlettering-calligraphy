@@ -23,4 +23,5 @@ const ServiceMain = styled.div`
     margin-top: 30px;
     display: flex;
     flex-wrap:wrap;
+    background-color: #ebccff;
 `

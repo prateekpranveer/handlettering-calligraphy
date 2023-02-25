@@ -4,7 +4,7 @@ import commision from './../assets/images/custom-commision.jpg'
 
 const SingleService = ({data}) => {
     return (
-        <>
+        <SingleMain>
             {
                 data.map((p) => (
                     <SingleServiceMain>
@@ -23,7 +23,7 @@ const SingleService = ({data}) => {
                     </SingleServiceMain>
                 ))
             }
-        </>
+        </SingleMain>
     )
 }
 
@@ -33,6 +33,16 @@ const SingleServiceMain = styled.div`
     width: 300px;
     margin: auto;
     margin: 20px auto;
+    background-color: #ebccff;
+`
+
+const SingleMain = styled.div`
+    background-color: #ebccff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap:wrap;
     background-color: #ebccff;
 `
 const SingleServiceInside = styled.div`

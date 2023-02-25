@@ -57,6 +57,6 @@ const Heading = styled.div`
 `
 const ServiceMain = styled.div`
     display: flex;
+    width: 100%;
     flex-wrap:wrap;
-    margin: 20px;
 `
